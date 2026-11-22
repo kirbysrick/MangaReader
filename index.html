@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#101014" />
+  <title>Manga Reader</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="./" aria-label="Manga Reader home"><span class="brand-icon">◈</span> Manga Reader</a>
+    <div class="top-actions">
+      <button id="themeToggle" class="icon-button" aria-label="Toggle dark mode" title="Toggle dark mode">☀</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="book-header">
+      <div class="eyebrow">YOUR LIBRARY</div>
+      <h1 id="mangaTitle">Manga Reader</h1>
+      <p id="mangaDescription">Read your chapters here.</p>
+    </section>
+
+    <section class="reader-panel" aria-label="Manga reader">
+      <div class="toolbar">
+        <label class="select-wrap">Chapter <select id="chapterSelect" aria-label="Choose chapter"></select></label>
+        <label class="select-wrap">Mode <select id="modeSelect" aria-label="Reading mode"><option value="single">Single page</option><option value="vertical">Vertical scroll</option></select></label>
+        <label class="select-wrap">Direction <select id="directionSelect" aria-label="Reading direction"><option value="rtl">Right to left</option><option value="ltr">Left to right</option></select></label>
+      </div>
+      <div id="reader" class="reader single" aria-live="polite">
+        <div class="empty-state">Choose a chapter to start reading.</div>
+      </div>
+      <div class="navigation">
+        <button id="prevButton" class="nav-button" type="button">← Previous</button>
+        <span id="pageIndicator" class="page-indicator">Page 0 / 0</span>
+        <button id="nextButton" class="nav-button primary" type="button">Next →</button>
+      </div>
+      <p class="hint">Use ← / → arrow keys to turn pages in single-page mode. Reading progress is saved on this device.</p>
+    </section>
+
+    <section class="chapter-list-section">
+      <div class="section-heading"><h2>Chapters</h2><span id="chapterCount"></span></div>
+      <div id="chapterList" class="chapter-list"></div>
+    </section>
+  </main>
+
+  <footer>Made for GitHub Pages · Static, fast, and ad-free</footer>
+  <script src="manga.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
